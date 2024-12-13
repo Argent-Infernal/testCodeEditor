@@ -32,8 +32,6 @@ const CodeEditor: React.FC = () => {
             body: JSON.stringify({ language, code }),
         });
 
-        console.log(response);
-
         const data = await response.json();
 
         if (data.status === 'success') {

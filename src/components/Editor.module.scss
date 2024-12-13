@@ -1,27 +1,44 @@
 .wrapper {
     @apply flex flex-col h-screen items-center justify-center;
 
-    >.text {
-        @apply max-w-[500px];
+    > .text {
+        @apply max-w-[500px] text-center; // Центрируем текст
     }
 
-    >.mainBlock {
-        @apply h-[50vh] w-[50%];
+    > .mainBlock {
+        @apply h-auto w-full max-w-[90%]; // Задаем максимальную ширину для мобильных устройств
 
-        >.editor {
-            @apply size-full flex flex-row gap-5;
+        > .editor {
+            @apply h-auto w-full flex flex-col gap-5; // Используем flex-col для мобильных устройств
 
-            >.editorBlock {
-                @apply border size-full;
+            > .editorBlock {
+                @apply border size-full h-[300px]; // Задаем фиксированную высоту для редактора
             }
-    
-            >.editorOutput{
-                @apply border size-full;
+
+            > .editorOutput {
+                @apply border size-full h-[200px]; // Задаем фиксированную высоту для вывода
             }
         }
 
-        >.submitButton {
+        > .submitButton {
             @apply w-full mt-5;
+        }
+    }
+}
+
+// Медиа-запросы для улучшения отображения на мобильных устройствах
+@media (min-width: 640px) {
+    .mainBlock {
+        > .editor {
+            @apply flex-row; // Возвращаем flex-row на больших экранах
+        }
+
+        > .editorBlock {
+            @apply h-[50vh]; // Задаем высоту для больших экранов
+        }
+
+        > .editorOutput {
+            @apply h-[50vh]; // Задаем высоту для больших экранов
         }
     }
 }
