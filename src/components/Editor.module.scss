@@ -1,6 +1,10 @@
 .wrapper {
     @apply flex flex-col h-screen items-center justify-center;
 
+    >.text {
+        @apply max-w-[500px];
+    }
+
     >.mainBlock {
         @apply h-[50vh] w-[50%];
 

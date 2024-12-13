@@ -45,6 +45,9 @@ const CodeEditor: React.FC = () => {
 
     return (
         <div className={styles.wrapper}>
+            <div className={styles.text}>
+                <p>Задача: сделать стрелочку функцию возвращающую a+b</p>
+            </div>
             <div className={styles.mainBlock}>
                 <SelectBlock language={language} setLanguage={setLanguage} theme={theme} setTheme={setTheme} />
 
