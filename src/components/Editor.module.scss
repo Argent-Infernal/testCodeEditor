@@ -1,0 +1,23 @@
+.wrapper {
+    @apply flex flex-col h-screen items-center justify-center;
+
+    >.mainBlock {
+        @apply h-[50vh] w-[50%];
+
+        >.editor {
+            @apply size-full flex flex-row gap-5;
+
+            >.editorBlock {
+                @apply border size-full;
+            }
+    
+            >.editorOutput{
+                @apply border size-full;
+            }
+        }
+
+        >.submitButton {
+            @apply w-full mt-5;
+        }
+    }
+}
